@@ -14,11 +14,15 @@ pipeline {
                         sh 'gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS'
                     }
                 // Configure Docker to use gcloud as a credential helper
-                sh 'gcloud auth configure-docker --quiet'
+                sh 'echo "configure docker"'
+		sh 'gcloud auth configure-docker --quiet'
+		
                 // Build the Docker image
-                sh "docker build -t ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER} ."
+                sh 'echo "build docker";
+		sh "docker build -t ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER} ."
                 // Push the Docker image to GCR
-                sh "docker push ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER}"
+                sh 'echo "Push docker"'
+		sh "docker push ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER}"
                 }
             }
         }
