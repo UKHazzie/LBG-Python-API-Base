@@ -19,10 +19,10 @@ pipeline {
 		
                 // Build the Docker image
                 sh 'echo "build docker"'
-		sh "docker build -t ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER} ."
+		sh "sudo docker build -t ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER} ."
                 // Push the Docker image to GCR
                 sh 'echo "Push docker"'
-		sh "docker push ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER}"
+		sh "sudo docker push ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER}"
                 }
             }
         }
