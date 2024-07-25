@@ -18,7 +18,7 @@ pipeline {
 		sh 'gcloud auth configure-docker --quiet'
 		
                 // Build the Docker image
-                sh 'echo "build docker";
+                sh 'echo "build docker"'
 		sh "docker build -t ${GCR_URL}/${IMAGE_NAME}:${BUILD_NUMBER} ."
                 // Push the Docker image to GCR
                 sh 'echo "Push docker"'
