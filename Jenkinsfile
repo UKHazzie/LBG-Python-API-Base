@@ -3,7 +3,7 @@ pipeline {
     environment {
         GCR_CREDENTIALS_ID = 'cf126c88-4640-4295-b888-08dcbbf88453'
         IMAGE_NAME = 'rh-test-image'
-        GCR_URL = 'gcr.io/europe-west1-docker.pkg.dev/lbg-mea-20/gcr-richard-week3-project'
+        GCR_URL = 'europe-west1-docker.pkg.dev/lbg-mea-20/gcr-richard-week3-project'
         PROJECT_ID = 'lbg_mea_20'
         CLUSTER_NAME = 'demo-cluster-lab1-week3'
         LOCATION = 'europe-west2-c'
