@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         GCR_CREDENTIALS_ID = 'cf126c88-4640-4295-b888-08dcbbf88453'
-        IMAGE_NAME = 'rh-test-image'
+        IMAGE_NAME = 'rh-test-image1'
         GCR_URL = 'gcr.io/europe-west1-docker.pkg.dev/lbg-mea-20/gcr-richard-week3-project'
         PROJECT_ID = 'lbg-mea-20'
         CLUSTER_NAME = 'demo-cluster-lab1-week3'
